@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using LMS_Na18.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using LMS_Na18.Models;
 
 namespace LMS_Na18
 {
@@ -43,6 +44,9 @@ namespace LMS_Na18
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<LMS_Na18Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("LMS_Na18Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,7 +74,7 @@ namespace LMS_Na18
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=People}/{action=Index}/{id?}");
             });
         }
     }

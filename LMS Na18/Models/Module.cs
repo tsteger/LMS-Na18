@@ -15,6 +15,7 @@ namespace LMS_Na18.Models
         public List<Document> documents { get; set; }
 
         public List<MyActivity> MyActivities { get; set; }
+        public int CourseId { get; set; }
 
     }
 }
