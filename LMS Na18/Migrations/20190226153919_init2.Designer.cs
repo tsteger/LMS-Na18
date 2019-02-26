@@ -4,14 +4,16 @@ using LMS_Na18.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LMS_Na18.Migrations
 {
     [DbContext(typeof(LMS_Na18Context))]
-    partial class LMS_Na18ContextModelSnapshot : ModelSnapshot
+    [Migration("20190226153919_init2")]
+    partial class init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

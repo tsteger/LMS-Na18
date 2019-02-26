@@ -12,5 +12,6 @@ namespace LMS_Na18.Models
         public string Description { get; set; }
         public DateTime TimeStamp { get; set; }
         public string Url { get; set; }
+        public int PersonId { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace LMS_Na18.Controllers
         public async Task<IActionResult> Index()
         {
             var db = _applicationDb.Users.Select(o => o.UserName);
+
             var ret = _context.Person.Select(o => o.Courses
             .FirstOrDefault().Modules
             .FirstOrDefault().MyActivities

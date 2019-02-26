@@ -12,8 +12,8 @@ namespace LMS_Na18.Models
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public List<Document> documents { get; set; }
+        public ICollection<Document> documents { get; set; }
 
-        public List<Module> Modules { get; set; }
+        public ICollection<Module> Modules { get; set; }
     }
 }
