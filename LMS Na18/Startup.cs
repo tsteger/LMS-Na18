@@ -74,7 +74,7 @@ namespace LMS_Na18
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=People}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
